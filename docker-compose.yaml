@@ -1,0 +1,15 @@
+version: '2.1'
+services:
+  gerrit:
+    container_name: gerrit
+    image: gerritcodereview/gerrit:2.15.2-ubuntu16
+    environment: 
+      - CANONICAL_WEB_URL=http://127.0.0.1:8080
+    ports:
+      - 8080:8080
+    networks:
+      - dev
+
+networks:
+ dev:
+
